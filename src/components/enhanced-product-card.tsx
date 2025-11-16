@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { AIQualityBadge } from "./ai-quality-badge"
 import { sampleAIQualityData } from "./sample-ai-quality-data"
 import { ComplianceChecker } from "./compliance-checker"
-import { DynamicPricingCard } from "./dynamic-pricing-card"
+import { DynamicPricingCard, type DynamicPricingData } from "./dynamic-pricing-card"
 import { CryptoPaymentButton } from "./crypto-payment-button"
 
 interface EnhancedProduct {
@@ -27,7 +27,7 @@ interface EnhancedProduct {
     aiQualityScore?: number
     hasDynamicPricing?: boolean
     complianceChecked?: boolean
-    pricingData?: any // Replace 'any' with the actual type if available
+    pricingData?: DynamicPricingData
 
 }
 

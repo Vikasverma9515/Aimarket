@@ -594,7 +594,7 @@ export default function EnhancedMarketplacePage() {
                       </div>
                       <h3 className="text-lg font-semibold mb-2">No assets found</h3>
                       <p className="text-gray-600 mb-6">
-                        Try adjusting your filters or search query to find what you're looking for.
+                        Try adjusting your filters or search query to find what you&apos;re looking for.
                       </p>
                       <div className="flex gap-3 justify-center">
                         <Button variant="outline" onClick={() => setSelectedCategory("All")}>

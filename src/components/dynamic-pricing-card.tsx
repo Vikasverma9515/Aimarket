@@ -19,7 +19,7 @@ import {
   Timer
 } from "lucide-react"
 
-interface DynamicPricingData {
+export interface DynamicPricingData {
   basePrice: number
   currentPrice: number
   demandMultiplier: number
@@ -34,7 +34,7 @@ interface DynamicPricingData {
 
 interface DynamicPricingCardProps {
   productId: number
-  pricingData: DynamicPricingData
+  pricingData?: DynamicPricingData
   onPurchase?: () => void
   showFullDetails?: boolean
 }

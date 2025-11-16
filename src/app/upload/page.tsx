@@ -372,7 +372,7 @@ export default function UploadPage() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-medium mb-2">❌ Don't:</h4>
+                <h4 className="font-medium mb-2">❌ Don&apos;t:</h4>
                 <ul className="space-y-1 text-gray-600">
                   <li>• Upload copyrighted content</li>
                   <li>• Include malicious code</li>

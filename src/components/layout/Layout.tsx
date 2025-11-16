@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 // import Header from './Header';
 // import Footer from './Footer';
 
@@ -20,8 +20,7 @@
 
 // export default Layout;
 
-
-
-
+const Layout = ({ children }: { children: React.ReactNode }) => <>{children}</>;
+export default Layout;
 
 

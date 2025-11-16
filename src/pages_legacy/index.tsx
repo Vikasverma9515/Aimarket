@@ -14,13 +14,16 @@ const mockAssets: Asset[] = [
     category: 'code',
     price: 29.99,
     tags: ['python', 'ai', 'automation'],
-    licenseType: 'standard',
-    sellerId: 'seller1',
-    seller: { id: 'seller1', email: 'seller@example.com', username: 'CodeMaster', createdAt: '2024-01-01' },
-    createdAt: '2024-01-15',
-    updatedAt: '2024-01-15',
+    license_type: 'standard',
+    file_url: null,
+    preview_url: null,
+    thumbnail: null,
+    seller_id: 'seller1',
+    seller: { id: 'seller1', email: 'seller@example.com', username: 'CodeMaster', bio: null, profile_pic: null, created_at: '2024-01-01', updated_at: '2024-01-01' },
+    created_at: '2024-01-15',
+    updated_at: '2024-01-15',
     rating: 4.8,
-    reviewCount: 124
+    review_count: 124
   },
   // Add more mock assets...
 ];

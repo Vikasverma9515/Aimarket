@@ -284,7 +284,7 @@ export default function AIMarketplacePage() {
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">Why Choose AIMarket?</h2>
               <p className="max-w-[800px] text-gray-600 md:text-lg">
-                We're not just another marketplace—we're the future of AI commerce with cutting-edge features.
+                We&apos;re not just another marketplace—we&apos;re the future of AI commerce with cutting-edge features.
               </p>
             </motion.div>
 
@@ -712,7 +712,7 @@ export default function AIMarketplacePage() {
                 Ready to Join the AI Revolution?
               </h2>
               <p className="mx-auto max-w-[700px] text-blue-100 md:text-xl">
-                               Join thousands of creators already earning from their AI expertise. Start your journey in the world's
+                               Join thousands of creators already earning from their AI expertise. Start your journey in the world&apos;s
                 most advanced AI marketplace.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-4">

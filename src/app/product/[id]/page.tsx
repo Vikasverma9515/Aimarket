@@ -329,7 +329,7 @@
 //                 <CardHeader>
 //                   <CardTitle className="flex items-center gap-2">
 //                     <FileText className="w-5 h-5" />
-//                     What's Included
+//                     What&apos;s Included
 //                   </CardTitle>
 //                 </CardHeader>
 //                 <CardContent>
@@ -841,7 +841,7 @@ export default function EnhancedProductPage({ params }: { params: { id: string }
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <FileText className="w-5 h-5" />
-                    What's Included
+                    What&apos;s Included
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
