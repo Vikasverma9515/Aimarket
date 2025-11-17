@@ -620,7 +620,7 @@ export default function EnhancedProductPage() {
               <div className="absolute top-4 right-4 flex flex-col gap-2">
                <AIQualityBadge 
   qualityData={sampleAIQualityData.highQuality}
-  productType="code"
+
   size="md"
 />
                 {/* {product.hasDynamicPricing && (
@@ -887,7 +887,7 @@ export default function EnhancedProductPage() {
                 <CardContent>
                   <AIQualityBadge 
   qualityData={sampleAIQualityData.highQuality}
-  productType="code"
+
   size="md"
 />
 

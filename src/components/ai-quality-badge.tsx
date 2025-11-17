@@ -32,7 +32,6 @@ interface AIQualityData {
 
 interface AIQualityBadgeProps {
   qualityData: AIQualityData
-  productType: 'code' | 'image' | 'prompt' | 'dataset'
   size?: 'sm' | 'md' | 'lg'
   showDetails?: boolean
 }
@@ -115,7 +114,7 @@ const getMetricDescription = (metric: string) => {
   }
 }
 
-export function AIQualityBadge({ qualityData, productType, size = 'md', showDetails = false }: AIQualityBadgeProps) {
+export function AIQualityBadge({ qualityData, size = 'md', showDetails = false }: AIQualityBadgeProps) {
   const sizeClasses = {
     sm: "text-xs px-2 py-1",
     md: "text-sm px-3 py-1.5",
@@ -131,7 +130,7 @@ export function AIQualityBadge({ qualityData, productType, size = 'md', showDeta
   if (showDetails) {
     return (
       <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <AIQualityDetails qualityData={qualityData} productType={productType} />
+        <AIQualityDetails qualityData={qualityData} />
       </Card>
     )
   }
@@ -161,16 +160,15 @@ export function AIQualityBadge({ qualityData, productType, size = 'md', showDeta
             </Badge>
           </DialogTitle>
         </DialogHeader>
-        
-        <AIQualityDetails qualityData={qualityData} productType={productType} />
+
+        <AIQualityDetails qualityData={qualityData} />
       </DialogContent>
     </Dialog>
   )
 }
 
-function AIQualityDetails({ qualityData, productType }: { 
+function AIQualityDetails({ qualityData }: {
   qualityData: AIQualityData
-  productType: string 
 }) {
   return (
     <div className="space-y-8">

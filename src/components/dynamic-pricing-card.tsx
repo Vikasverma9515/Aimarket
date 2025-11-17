@@ -78,7 +78,6 @@ export function DynamicPricingCard({
   onPurchase,
   showFullDetails = false
 }: DynamicPricingCardProps) {
-  const priceIncrease = pricingData.currentPrice - pricingData.basePrice
 
   if (!showFullDetails) {
     return (

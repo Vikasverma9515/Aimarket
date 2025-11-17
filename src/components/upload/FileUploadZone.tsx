@@ -27,17 +27,7 @@ const FileUploadZone: React.FC<FileUploadZoneProps> = ({
     }
   }, []);
 
-  const handleDrop = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setDragActive(false);
-    
-    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      handleFiles(Array.from(e.dataTransfer.files));
-    }
-  }, []);
-
-  const handleFiles = (files: File[]) => {
+  const handleFiles = useCallback((files: File[]) => {
     const validFiles = files.filter(file => {
       if (file.size > maxSizeInMB * 1024 * 1024) {
         alert(`File ${file.name} is too large. Maximum size is ${maxSizeInMB}MB.`);
@@ -48,7 +38,17 @@ const FileUploadZone: React.FC<FileUploadZoneProps> = ({
 
     setSelectedFiles(validFiles);
     onFilesSelected(validFiles);
-  };
+  }, [maxSizeInMB, maxFiles, onFilesSelected]);
+
+  const handleDrop = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragActive(false);
+
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      handleFiles(Array.from(e.dataTransfer.files));
+    }
+  }, [handleFiles]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();

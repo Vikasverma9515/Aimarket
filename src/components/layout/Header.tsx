@@ -15,7 +15,7 @@ import Button from '../common/Button';
 const Header: React.FC = () => {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // TODO: Replace with auth state
+  const [isLoggedIn] = useState(false); // TODO: Replace with auth state
 
   const navigation = [
     { name: 'Marketplace', href: '/marketplace' },

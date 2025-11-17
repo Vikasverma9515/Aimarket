@@ -237,7 +237,6 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { EnhancedProductCard } from "@/components/enhanced-product-card"
-import Image from "next/image"
 
 const categories = [
   { name: "All", icon: <Grid className="w-4 h-4" />, count: 12500 },

@@ -2,20 +2,16 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { motion } from "framer-motion"
-import { 
-  User, 
-  Settings, 
-  Star, 
-  Download, 
-  DollarSign, 
-  TrendingUp, 
+import {
+  User,
+  Settings,
+  Star,
+  Download,
+  DollarSign,
+  TrendingUp,
   Edit,
   Plus,
-  MoreHorizontal,
-  Eye,
-  Heart,
-  Share2
+  MoreHorizontal
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -202,7 +198,7 @@ export default function ProfilePage() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    {userAssets.slice(0, 3).map((asset, index) => (
+                    {userAssets.slice(0, 3).map((asset) => (
                       <div key={asset.id} className="flex items-center gap-4">
                         <div className="w-12 h-12 relative rounded overflow-hidden">
                           <Image

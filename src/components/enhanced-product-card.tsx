@@ -69,7 +69,7 @@ export function EnhancedProductCard({ product, viewMode }: EnhancedProductCardPr
                                 {product.aiQualityScore && (
                                     <AIQualityBadge
                                         qualityData={sampleAIQualityData.highQuality}
-                                        productType="code"
+
                                         size="md"
                                     />
                                 )}
@@ -182,7 +182,6 @@ export function EnhancedProductCard({ product, viewMode }: EnhancedProductCardPr
                     {product.aiQualityScore && (
                         <AIQualityBadge
                             qualityData={sampleAIQualityData.highQuality}
-                            productType="code"
                             size="md"
                         />
                     )}

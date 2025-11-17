@@ -3,16 +3,12 @@ import { ASSET_CATEGORIES } from '@/utils/constants';
 
 interface FilterSidebarProps {
   selectedCategory: string;
-  priceRange: [number, number];
   onCategoryChange: (category: string) => void;
-  onPriceRangeChange: (range: [number, number]) => void;
 }
 
 const FilterSidebar: React.FC<FilterSidebarProps> = ({
   selectedCategory,
-  priceRange,
-  onCategoryChange,
-  onPriceRangeChange
+  onCategoryChange
 }) => {
   return (
     <div className="w-64 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
@@ -49,58 +45,6 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
         </div>
       </div>
 
-      {/* Price Range */}
-      <div className="mb-6">
-        <h4 className="text-sm font-medium text-gray-900 mb-3">Price Range</h4>
-        <div className="space-y-2">
-          <label className="flex items-center">
-            <input
-              type="radio"
-              name="price"
-              onChange={() => onPriceRangeChange([0, 0])}
-              className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300"
-            />
-            <span className="ml-2 text-sm text-gray-700">Free</span>
-          </label>
-          <label className="flex items-center">
-            <input
-                          type="radio"
-              name="price"
-              onChange={() => onPriceRangeChange([1, 25])}
-              className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300"
-            />
-            <span className="ml-2 text-sm text-gray-700">$1 - $25</span>
-          </label>
-          <label className="flex items-center">
-            <input
-              type="radio"
-              name="price"
-              onChange={() => onPriceRangeChange([26, 50])}
-              className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300"
-            />
-            <span className="ml-2 text-sm text-gray-700">$26 - $50</span>
-          </label>
-          <label className="flex items-center">
-            <input
-              type="radio"
-              name="price"
-              onChange={() => onPriceRangeChange([51, 100])}
-              className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300"
-            />
-            <span className="ml-2 text-sm text-gray-700">$51 - $100</span>
-          </label>
-          <label className="flex items-center">
-            <input
-              type="radio"
-              name="price"
-              onChange={() => onPriceRangeChange([101, 1000])}
-              className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300"
-            />
-            <span className="ml-2 text-sm text-gray-700">$100+</span>
-          </label>
-        </div>
-      </div>
-
       {/* Rating Filter */}
       <div className="mb-6">
         <h4 className="text-sm font-medium text-gray-900 mb-3">Rating</h4>
@@ -120,10 +64,9 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
       </div>
 
       {/* Clear Filters */}
-      <button 
+      <button
         onClick={() => {
           onCategoryChange('');
-          onPriceRangeChange([0, 1000]);
         }}
         className="w-full text-sm text-primary-600 hover:text-primary-700 font-medium"
       >
