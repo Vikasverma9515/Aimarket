@@ -75,7 +75,6 @@ export function EnhancedProductCard({ product, viewMode }: EnhancedProductCardPr
                                 )}
                                 {product.hasDynamicPricing && (
                                     <DynamicPricingCard
-                                        productId={product.id}
                                         pricingData={product.pricingData} // Assuming product.pricingData is of type DynamicPricingData
                                         showFullDetails={false}
                                     />
@@ -146,7 +145,7 @@ export function EnhancedProductCard({ product, viewMode }: EnhancedProductCardPr
                             {/* MVP Features Row */}
                             <div className="flex items-center gap-2 mt-3">
                                 {product.complianceChecked && (
-                                    <ComplianceChecker productId={product.id} productType="code" />
+                                    <ComplianceChecker />
                                 )}
                             </div>
                         </div>
@@ -194,7 +193,6 @@ export function EnhancedProductCard({ product, viewMode }: EnhancedProductCardPr
                     <div className="absolute bottom-2 left-2 right-2">
                         {/* <DynamicPricingCard productId={product.id} showFullDetails={false} /> */}
                         <DynamicPricingCard
-                            productId={product.id}
                             pricingData={product.pricingData} // Assuming product.pricingData is of type DynamicPricingData
                             showFullDetails={false}
                         />
@@ -256,7 +254,7 @@ export function EnhancedProductCard({ product, viewMode }: EnhancedProductCardPr
                         by {product.seller}
                     </div>
                     {product.complianceChecked && (
-                        <ComplianceChecker productId={product.id} productType="code" />
+                        <ComplianceChecker />
                     )}
                 </div>
 

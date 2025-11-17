@@ -6,15 +6,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
-import { Input } from "@/components/ui/input"
+
 import { Label } from "@/components/ui/label"
-import { 
-  Wallet, 
-  Copy, 
-  ExternalLink, 
-  CheckCircle, 
-  Clock, 
-  AlertCircle,
+import {
+  Wallet,
+  Copy,
+  ExternalLink,
+  CheckCircle,
   Zap,
   ArrowRight
 } from "lucide-react"
@@ -78,7 +76,6 @@ const cryptoOptions: CryptoOption[] = [
 
 export function CryptoPaymentModal({ isOpen, onClose, product, onPaymentSuccess }: CryptoPaymentModalProps) {
   const [selectedCrypto, setSelectedCrypto] = useState<CryptoOption>(cryptoOptions[0])
-  const [walletConnected, setWalletConnected] = useState(false)
   const [paymentStep, setPaymentStep] = useState<'select' | 'connect' | 'confirm' | 'processing' | 'success'>('select')
   const [transactionHash, setTransactionHash] = useState('')
   const [walletAddress, setWalletAddress] = useState('')
@@ -89,7 +86,6 @@ export function CryptoPaymentModal({ isOpen, onClose, product, onPaymentSuccess 
   const connectWallet = async () => {
     setPaymentStep('connect')
     setTimeout(() => {
-      setWalletConnected(true)
       setWalletAddress('0x1234...5678')
       setPaymentStep('confirm')
     }, 2000)

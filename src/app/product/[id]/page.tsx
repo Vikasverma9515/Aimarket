@@ -458,7 +458,6 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { 
   Star, 
   Download, 
@@ -484,7 +483,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { AIQualityBadge } from "@/components/ai-quality-badge"
 import { sampleAIQualityData } from "@/components/sample-ai-quality-data"
 import { ComplianceChecker } from "@/components/compliance-checker"
-import { DynamicPricingCard } from "@/components/dynamic-pricing-card"
 import { CryptoPaymentButton } from "@/components/crypto-payment-button"
 
 
@@ -570,7 +568,7 @@ const product = {
   ]
 }
 
-export default function EnhancedProductPage({ params }: { params: { id: string } }) {
+export default function EnhancedProductPage() {
   const [selectedImage, setSelectedImage] = useState(0)
   const [isLiked, setIsLiked] = useState(false)
 
@@ -798,9 +796,7 @@ export default function EnhancedProductPage({ params }: { params: { id: string }
 
                         {/* Compliance Checker */}
             {product.hasComplianceCheck && (
-              <ComplianceChecker 
-                productId={product.id} 
-                productType="code" 
+              <ComplianceChecker
                 size="lg"
               />
             )}

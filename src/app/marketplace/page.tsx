@@ -230,7 +230,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Filter, Grid, List, Star, Download, Eye, Code, ImageIcon, FileText, Database, Zap, Shield, TrendingUp } from "lucide-react"
+import { Filter, Grid, List, Eye, Code, ImageIcon, FileText, Database, Zap, Shield, TrendingUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"

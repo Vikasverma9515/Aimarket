@@ -13,8 +13,9 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { motion } from "framer-motion"
-import { Upload, Image as ImageIcon, Code, FileText, Database, X, Plus, DollarSign, Tag } from "lucide-react"
+import { Upload, Image as ImageIcon, Code, FileText, Database, X, Plus, DollarSign } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -303,9 +304,11 @@ export default function UploadPage() {
                     <div className="mt-4 grid grid-cols-2 gap-4">
                       {formData.images.map((file, index) => (
                         <div key={index} className="relative">
-                          <img
+                          <Image
                             src={URL.createObjectURL(file)}
                             alt={`Preview ${index + 1}`}
+                            width={100}
+                            height={96}
                             className="w-full h-24 object-cover rounded"
                           />
                           <Button

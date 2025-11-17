@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
@@ -92,7 +92,7 @@ const getMetricLabel = (metric: string) => {
   }
 }
 
-const getMetricDescription = (metric: string, productType: string) => {
+const getMetricDescription = (metric: string) => {
   switch (metric) {
     case 'codeQuality':
       return 'Code structure, best practices, maintainability, and readability'
@@ -233,7 +233,7 @@ function AIQualityDetails({ qualityData, productType }: {
                             </div>
                           </div>
                           <div className="text-xs text-gray-500 mt-1">
-                            {getMetricDescription(metric, productType)}
+                            {getMetricDescription(metric)}
                           </div>
                         </div>
                       </div>

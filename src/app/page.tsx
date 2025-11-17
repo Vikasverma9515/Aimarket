@@ -1,14 +1,11 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import {
   Check,
   ChevronRight,
-  Menu,
-  X,
   ArrowRight,
   Star,
   Zap,
@@ -32,12 +29,9 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function AIMarketplacePage() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      // setIsScrolled(window.scrollY > 10)
     }
 
     window.addEventListener("scroll", handleScroll)

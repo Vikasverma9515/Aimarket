@@ -1,21 +1,17 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { 
-  TrendingUp, 
-  TrendingDown, 
-  Clock, 
-  Users, 
-  Zap, 
-  AlertTriangle,
+import {
+  TrendingUp,
+  Clock,
+  Zap,
   Info,
   ChevronUp,
-  ChevronDown,
   Timer
 } from "lucide-react"
 
@@ -33,7 +29,6 @@ export interface DynamicPricingData {
 }
 
 interface DynamicPricingCardProps {
-  productId: number
   pricingData?: DynamicPricingData
   onPurchase?: () => void
   showFullDetails?: boolean
@@ -78,27 +73,12 @@ const getDemandIcon = (level: string) => {
   }
 }
 
-export function DynamicPricingCard({ 
-  productId, 
-  pricingData = mockPricingData, 
+export function DynamicPricingCard({
+  pricingData = mockPricingData,
   onPurchase,
-  showFullDetails = false 
+  showFullDetails = false
 }: DynamicPricingCardProps) {
-  const [timeLeft, setTimeLeft] = useState(pricingData.timeUntilNextCheck)
-  
   const priceIncrease = pricingData.currentPrice - pricingData.basePrice
-  const priceIncreasePercent = Math.round((priceIncrease / pricingData.basePrice) * 100)
-  const conversionRate = ((pricingData.recentPurchases24h / pricingData.recentViews24h) * 100).toFixed(1)
-  
-  // Simulate countdown
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // This would be real countdown logic in production
-      setTimeLeft(prev => prev)
-    }, 60000)
-    
-    return () => clearInterval(interval)
-  }, [])
 
   if (!showFullDetails) {
     return (

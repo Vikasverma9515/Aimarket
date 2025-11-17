@@ -3,19 +3,16 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
-import { 
-  User, 
-  Settings, 
-  Star, 
-  Download, 
-  DollarSign, 
-  TrendingUp, 
+import {
+  Settings,
+  Star,
+  Download,
+  DollarSign,
+  TrendingUp,
   Edit,
   Plus,
   MoreHorizontal,
   Eye,
-  Heart,
   Share2,
   Calendar,
   MapPin,
@@ -399,7 +396,7 @@ export default function ProfilePage() {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
-                      {analyticsData.monthlyEarnings.map((data, index) => (
+                      {analyticsData.monthlyEarnings.map((data) => (
                         <div key={data.month} className="flex items-center gap-4">
                           <div className="w-12 text-sm font-medium">{data.month}</div>
                           <div className="flex-1">

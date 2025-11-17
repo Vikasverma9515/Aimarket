@@ -6,16 +6,15 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { 
-  Shield, 
-  Globe, 
-  CheckCircle, 
-  AlertTriangle, 
-  Clock, 
-  Download, 
+import {
+  Shield,
+  Globe,
+  CheckCircle,
+  AlertTriangle,
+  Clock,
+  Download,
   ExternalLink,
-  Info,
-  FileText
+  Info
 } from "lucide-react"
 
 interface ComplianceStatus {
@@ -36,8 +35,6 @@ interface ComplianceData {
 }
 
 interface ComplianceCheckerProps {
-  productId: number
-  productType: 'code' | 'image' | 'prompt' | 'dataset'
   size?: 'sm' | 'lg'
 }
 
@@ -116,7 +113,7 @@ const getOverallScore = (data: ComplianceData) => {
   return Math.round((compliant.length / applicable.length) * 100)
 }
 
-export function ComplianceChecker({ productId, productType, size = 'sm' }: ComplianceCheckerProps) {
+export function ComplianceChecker({ size = 'sm' }: ComplianceCheckerProps) {
   const [complianceData] = useState<ComplianceData>(mockComplianceData)
   
   const overallScore = getOverallScore(complianceData)
